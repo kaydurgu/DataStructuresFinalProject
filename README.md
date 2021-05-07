@@ -76,6 +76,12 @@ Now let's see how to implement Binary search in Java
 ## Time Complexity
 Since Binary Search divides the array into half each time its time complexity is **O(log2(N))** where n is the size of the array. This time complexity is a marked improvement on the O(N) time complexity of Linear Search.
 
+#### ICPC 
+ACM-ICPC 2014 problem F</br>
+[Problem](https://www.e-olymp.com/ru/problems/7329)</br>
+Solution by using binary search in c++ </br>
+[Solution](https://github.com/kaydurgu/Tasks/blob/master/e-olymp%20bin_search/%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D1%82%D0%B2%D0%BE.cpp)</br>
+
 
 # Ternary Search
 
@@ -122,3 +128,97 @@ Let's take a quick look at how we can use this method:
  ### Implementation
  
  ![10](https://user-images.githubusercontent.com/57888663/117502879-d80bd800-af88-11eb-8fc4-b2fda6e0845f.PNG)
+ 
+ ### Time Complexity: 
+ 
+ O(log(n)) where n is the size of array 
+ 
+ 
+## The List Interface
+The List Interface has primarily two methods which can be used for searching: **indexOf()** and **contains()**.
+
+**indexOf()** method returns the index of the element if it exists in the list or -1 if it doesn't exist.
+
+The **contains()** method returns true or false depending upon the existence of the element. It internally calls the **indexOf()** method.
+
+The List interface uses Sequential Search to perform the index lookup and hence its time complexity is O(N).
+
+Let's try out a search operation on a List
+
+![11](https://user-images.githubusercontent.com/57888663/117509749-7604a000-af93-11eb-8892-a281f9b41a2f.PNG)
+
+### Time Complexity 
+
+O(n)-where n is the size of list - linear comlexity 
+
+
+## Time complexity comparison 
+
+![12](https://user-images.githubusercontent.com/57888663/117511151-f3c9ab00-af95-11eb-8217-507e17232a21.PNG)
+
+The black line that goes upward is line **"Number of Operations"**</br>
+The black line that goes left side is line **"Number of elements"**</br>
+As you see in the picture if Number of elemets grow consequently Number of operations are also grow.
+
+Sorry for the picture because i drow it by myself. So as you see in the picture the difference between Ternary and Binary search is minmimal but by growing Number of elements their difference will get more and more.
+
+## Fenwick Tree summation between l and r and Postfix sum
+
+For example imagine u have an array with the size of **n** and u want to find sum between L and R where 0 < L < R < N
+
+now i want to show three methods of solving such kind of problem.
+
+### 1.Brute force (1st grade student )
+
+![15](https://user-images.githubusercontent.com/57888663/117512996-6425fb80-af99-11eb-9007-6fa42718885a.PNG)
+
+in this case you just go throght array from L to R and just summing 
+
+![17](https://user-images.githubusercontent.com/57888663/117514245-1363d200-af9c-11eb-963f-e41921eae66d.PNG)
+
+
+#### Time complexity
+
+O(n) where n is the size of array bcs we look for the worst case O(arr.length - 0) = O(n) 
+
+#### Space complexity
+
+O(n) bcs every time when u want know the sum between L and R you have to go through the array
+
+### PostFix sum(2 nd course student)
+
+![2](https://user-images.githubusercontent.com/57888663/117514656-10b5ac80-af9d-11eb-9d8d-4209b9ed0ad0.PNG)
+
+this method a little bit tricky bcs there is little bit logic and math.
+
+![1](https://user-images.githubusercontent.com/57888663/117514639-fed40980-af9c-11eb-8386-cc535d7d046b.PNG)
+
+as marked in picture u should go one index left in oreder to add L point to sum.
+
+#### Time complexity
+
+O(n) where n is the size of array bcs u should to go through whole array to memorize sum in PostFix array 
+
+#### Space complexity
+
+O(1) bcs once u memorized all position PostFix sum, there is no need to go through array again.
+u can easily find sum between L and R by **PostFix[R]-PostFix[L-1]**
+
+## Fenwick tree (3rd course student )
+
+in order to find sum between L and R in this method we should to build tree using bitwise operators.
+
+![123](https://user-images.githubusercontent.com/57888663/117515584-5d01ec00-af9f-11eb-8a53-1fea3166d93a.PNG)
+
+![4](https://user-images.githubusercontent.com/57888663/117515602-668b5400-af9f-11eb-96a8-7bfa58145b03.PNG)
+
+
+#### Time complexity
+
+Time complexity for sum between L and R is O(log(n)) </br>
+For updating O(log(n))
+
+#### Space complexity
+
+O(1)
+
