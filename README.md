@@ -222,3 +222,18 @@ For updating O(log(n))
 
 O(1)
 
+## Stuck
+
+[Stuck implementation](https://github.com/kaydurgu/Tasks/blob/master/Stck.java)</br>
+
+the main difference of our code is :: </br>
+
+![1234](https://user-images.githubusercontent.com/57888663/117516359-93406b00-afa1-11eb-82ad-cd4dc9686ca3.PNG)
+
+we can add stuck to stuck and optimize that even for O(1)
+## DoubleLinkedList
+[DoubleLinkedList implementation](https://github.com/kaydurgu/Tasks/blob/master/DoubleLinkedList%20implementation%20nor%20perfect/DBL.java)</br>
+
+##  Queue
+
+[Queue implementation](https://github.com/kaydurgu/Tasks/blob/master/Queue.java)</br>
