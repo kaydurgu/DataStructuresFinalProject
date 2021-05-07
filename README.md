@@ -2,11 +2,6 @@
 
 For the final project we desided to just implement all data structure consepts. especially, we will take a deep look at search algorithms since this is one of the most important data structures/algorithms concept. 
 
-## Team members
-
-Bakytbek uulu Zhanbolot </br>
-Alisher Kachykeev
-
 
 
 # Linear search 
