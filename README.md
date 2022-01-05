@@ -4,7 +4,7 @@ For the final project we desided to just implement all data structure consepts. 
 
 ### Team members
 Zhanbolot Bakytbek uulu</br>
-Alisher Kachykeev </br>
+
 
 # Linear search 
 
